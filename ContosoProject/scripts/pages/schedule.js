@@ -22,16 +22,23 @@ const schedule = [
 ];
 
 
-
-function createSessionElement(session) {
-    
+const list = document.getElementById("schedule")
+function createSessionElement(session) {    
 session.map((item) => {
-    var list = document.getElementById("schedule")
         var li = document.createElement("li");
-        var textTitle = document.createTextNode(item.title);
-        li.appendChild(textTitle)
+        // var textTitle = document.createTextNode(item.title);
+        li.textContent = item.title
+        // li.appendChild(textTitle)
         list.appendChild(li);
     }
 )}
 
 createSessionElement(schedule)
+function displaySchedule(){
+    // clearList();
+    for (var i = 0; i < schedule.length; i++){
+        const li = createSessionElement(schedule);
+        list.appendChild(li);
+    }
+}
+// displaySchedule();
