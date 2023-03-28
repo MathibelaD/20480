@@ -83,6 +83,8 @@ const schedule = [
 
 
 const list = document.getElementById("schedule")
+const track1Checkbox = document.getElementById("show-track-1")
+const track2Checkbox = document.getElementById("show-track-2")
 function createSessionElement(session) {    
 session.map((item) => {
         var li = document.createElement("li");
@@ -93,7 +95,7 @@ session.map((item) => {
     }
 )}
 
-createSessionElement(schedule)
+// createSessionElement(schedule)
 function displaySchedule(){
     // clearList();
     for (var i = 0; i < schedule.length; i++){
@@ -101,4 +103,5 @@ function displaySchedule(){
         list.appendChild(li);
     }
 }
-// displaySchedule();
+
+track1Checkbox.addEventListener('click', displaySchedule);
