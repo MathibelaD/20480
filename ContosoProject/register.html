@@ -29,7 +29,7 @@
         <section class="page-section register">
             <div class="container">
                 <h1>Register for the conference</h1>
-                <form method="post" action="/registration/new" id="registration-form">
+                <form method="post" action="/registered.html" id="registration-form">
                     <!--
                         TODO: Add form inputs
 
@@ -44,7 +44,7 @@
                     <!-- Use the following template for the inputs -->
                     <div class="field">
                         <label for="{input-id}">FirstName</label>
-                        <input type="text" id="{input-id}" name="{input-name}" />
+                        <input type="text" id="{input-id}" name="{input-name}" autofocus />
                     </div>
                     <div class="field">
                         <label for="{input-id}">LastName</label>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="field">
                         <label for="{input-id}">WebsiteUrl</label>
-                        <input type="url" id="{input-id}" name="{input-name}" />
+                        <input type="url" id="{input-id}" name="{input-name}" placeholder="http://" />
                     </div>
 
                     <div>
