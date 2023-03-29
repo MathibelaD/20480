@@ -85,6 +85,13 @@ const schedule = [
 const list = document.getElementById("schedule")
 const track1Checkbox = document.getElementById("show-track-1")
 const track2Checkbox = document.getElementById("show-track-2")
+
+function clearList() {
+    while (list.firstChild) {
+        list.removeChild(list.firstChild);
+    }
+}
+
 function createSessionElement(session) {    
         var li = document.createElement("li");
         li.textContent = session.title;
@@ -93,10 +100,12 @@ function createSessionElement(session) {
 
 // createSessionElement(schedule)
 function displaySchedule(){
-    // clearList();
+    clearList();
     for (var i = 0; i < schedule.length; i++){
         const li = createSessionElement(schedule[i]);
-        // console.log(schedule[i].tracks[0]);
+        if(track1Checkbox.checked && track2Checkbox.checked) {
+            list.appendChild(li);
+        }
         if(schedule[i].tracks.indexOf(1) >= 0 && track1Checkbox.checked) {
              list.appendChild(li);
             // console.log(schedule[i].tracks);
@@ -105,9 +114,7 @@ function displaySchedule(){
              list.appendChild(li);
             // console.log(schedule[i].tracks);
         }
-        if(track1Checkbox.checked && track2Checkbox.checked) {
-            list.appendChild(li);
-    }
+        
 }
 }
 
