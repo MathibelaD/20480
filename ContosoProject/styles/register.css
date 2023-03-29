@@ -17,6 +17,11 @@
     padding: .5rem;
     width: 100%;
     box-sizing: border-box;
+    border-color: black;
+}
+
+.register input:invalid {
+    border-color: red;
 }
 
 .register button {
