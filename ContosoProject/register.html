@@ -29,7 +29,7 @@
         <section class="page-section register">
             <div class="container">
                 <h1>Register for the conference</h1>
-                <form  id="registration-form">
+                <form method="post" action="/registration/new" id="registration-form">
                     <!--
                         TODO: Add form inputs
 
@@ -40,33 +40,30 @@
                         ConfirmPassword
                         WebsiteUrl - optional url string
                     -->
-                        
-                    <!-- Use the following template for the inputs -->
                     <div class="field">
-                        <label for="{input-id}">FirstName</label>
-                        <input type="text" id="firstname" name="{input-name}" autofocus required/>
+                        <label for="first-name">First name:</label>
+                        <input type="text" id="first-name" name="FirstName" required="required" autofocus="autofocus"/>
                     </div>
                     <div class="field">
-                        <label for="{input-id}">LastName</label>
-                        <input type="text" id="lastname" name="{input-name}" required/>
+                        <label for="last-name">Last name:</label>
+                        <input type="text" id="last-name" name="LastName" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="{input-id}">EmailAddress</label>
-                        <input type="email" id="email" name="{input-name}" required/>
+                        <label for="email-address">Email address:</label>
+                        <input type="email" id="email-address" name="EmailAddress" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="{input-id}">Password</label>
-                        <input type="password" id="password" name="{input-name}" required pattern="[a-zA-Z0-9]{5,}" title="add atleast 5 characters"/>
+                        <label for="password">Choose a password:</label>
+                        <input type="password" id="password" name="Password" required="required" pattern="[a-zA-Z0-9]{5,}" title="At least 5 letters and numbers"/>
                     </div>
                     <div class="field">
-                        <label for="{input-id}">ConfirmPassword</label>
-                        <input type="password" id="confirm-password" name="{input-name}" required/>
+                        <label for="confirm-password">Confirm your password:</label>
+                        <input type="password" id="confirm-password" name="ConfirmPassword" required="required"/>
                     </div>
                     <div class="field">
-                        <label for="{input-id}">WebsiteUrl</label>
-                        <input type="url" id="websiteurl" name="{input-name}" placeholder="http://" />
+                        <label for="website">Website/blog:</label>
+                        <input type="url" id="website" name="WebsiteUrl" placeholder="http://"/>
                     </div>
-
                     <div>
                         <button type="submit">Register</button>
                     </div>
