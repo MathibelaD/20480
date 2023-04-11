@@ -27,7 +27,7 @@ function moveVenueSectionToTop() {
 
 function updateUIForPosition(position) {
     // TODO: Calculate the distance from the conference
-    // const distance = ... ;
+    const distance = distanceFromConference(position.coords) ;
 
     showDistanceMessage(distance);
     const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
@@ -42,7 +42,7 @@ function error() {
 
     // TODO: Get current position from the geolocation API.
     //       Call updateUIForPosition for success and error for failure.
-
+navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
     // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
