@@ -1,7 +1,7 @@
 ﻿import { SpeakerBadgePage } from "../SpeakerBadgePage.js";
 
 const badgeElement = document.querySelector(".badge");
-new SpeakerBadgePage(badgeElement);
+const speakerBagde = new SpeakerBadgePage(badgeElement);
 
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
