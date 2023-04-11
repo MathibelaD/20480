@@ -31,9 +31,17 @@
         /// <summary>Loads the starred sessions from storage.</summary>
 
         // TODO: get the "stars" from local storage
-
+        var json = this.localStorage.getItem("stars")
         // TODO: parse the JSON string into this.sessions
-
+        if(json){
+            try {
+                this.sessions = JSON.parse(json) || []
+            } catch (error) {
+                this.sessions = []
+            }
+        } else {
+            this.sessions = []
+        }
         // TODO: handle failures due to missing data, etc
     }
 
@@ -41,7 +49,7 @@
         /// <summary>Saves the starred sessions to storage.</summary>
 
         // TODO: convert this.sessions into a JSON string
-
+            this.localStorage.setItem("stars", JSON.stringify(this.sessions))
         // TODO: save this JSON string into local storage as "stars"
     }
 }
