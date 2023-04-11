@@ -23,17 +23,42 @@ header.page-header p {
 
 /* TODO: header.page-header .register */
 header.page-header .register {
+    display: block;
+    height: 10rem;
+    width: 16rem;
+    right: 3.5rem;
+    top: 2rem;
+    padding-top: 6rem;
+    position: absolute;
 
+    font-size: 2.7rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-image: linear-gradient(#a80000,#740404);
+    border-radius: 100%;
+    transform: rotate(6deg);
 }
 
 /* TODO: header.page-header .register:hover */
 header.page-header .register:hover {
-
+    background-image: linear-gradient(#bc0101, #8c0909);
 }
 
 /* TODO: header.page-header .register:before */
 header.page-header .register:before {
-
+    display: block;
+    position: absolute;
+    border: 3px dotted #740404;
+    border-radius: 100%;
+    height: 16.8rem;
+    width: 16.8rem;
+    top: -0.7rem;
+    right: -0.7rem;
+    content: "";
 }
 
 header.page-header .register .free {
