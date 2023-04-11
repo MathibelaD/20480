@@ -6,12 +6,12 @@
 import { LocalStarStorage } from "../LocalStarStorage.js";
 import { ScheduleItem } from "../ScheduleItem.js";
 
-// TODO: Create a ScheduleList class
+
 
 // TODO: Refactor these variables into properties of the ScheduleList class.
 //       Assign them in the "initialize" method from arguments
 
-const element, localStarStorage;
+let element, localStarStorage;
 
 // TODO: Refactor these functions into methods of the ScheduleList class.
 
