@@ -2,6 +2,7 @@
 
 function hideLinksThatRequireOnline() {
     const allNavLinks = document.querySelectorAll("nav.page-nav a");
+    console.log(allNavLinks)
     for (let i = 0; i < allNavLinks.length; i++) {
         const href = allNavLinks[i].getAttribute("href");
         if (!offlinePages.test(href)) {
@@ -13,18 +14,23 @@ function hideLinksThatRequireOnline() {
 function showLinks() {
     const allNavLinks = document.querySelectorAll("nav.page-nav a");
     for (let i = 0; i < allNavLinks.length; i++) {
-        allNavLinks[i].style.display = "";
+        allNavLinks[i].style.display = "";       
     }
+    console.log(allNavLinks)
 };
 
 
     // TODO: if currently offline, hide navigation links that require online
-
+    if (!navigator.onLine){
+        hideLinksThatRequireOnline()
+    }
     // TODO: add onoffline and ononline events to document.body,
     //       which either hide or show navigation links.
-
+    document.body.onoffline = hideLinksThatRequireOnline;
+    document.body.ononline = showLinks;
     // TODO: also handle the applicationCache error event to hide links
-
+    applicationCache.addEventListener("error", hideLinksThatRequireOnline, false);
+// console.log(applicationCache)
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
