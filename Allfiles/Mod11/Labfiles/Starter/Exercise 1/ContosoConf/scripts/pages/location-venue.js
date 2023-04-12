@@ -10,9 +10,24 @@ function showRoomInfo(roomId) {
 };
 
     // TODO: Get the room elements in the svg element.
-    // const rooms = ;
+    const rooms = document.querySelectorAll(".room");
 
     // TODO: Add a click event listener for each room element.
+    rooms.forEach((v,k) => {
+        console.log(v)
+        v.addEventListener("click", function () {
+            console.log(this.id)
+            showRoomInfo(this.id);
+        })
+    })
+    // for (let i = 0; i < rooms.length; i++) {
+    //     const room = rooms[i];
+    //     console.log(room)
+    //     room.addEventListener("click", function () {
+    //         showRoomInfo(this.id);
+    //         console.log(this.id)
+    //     });
+    // }
     //       Call the showRoomInfo function, passing the clicked element's id property.
 
 // SIG // Begin signature block
