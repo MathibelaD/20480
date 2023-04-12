@@ -33,11 +33,13 @@ export class LivePage {
 
     askQuestion(text) {
         // TODO: Create a message object with the format { ask: text }
-
+        const message = {
+            ask: text
+        };
         // TODO: Convert the message object into a JSON string
-
+        const json = JSON.stringify(message);
         // TODO: Send the message to the socket
-
+        this.socket.send(json);
         // Clear the input ready for another question.
         this.questionInput.value = "";
     }
