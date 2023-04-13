@@ -37,3 +37,14 @@ h1 {
     border-top: 200px solid; 
     border-right: 200px solid blue;
  } 
+
+/* #mycanvas {
+    position: relative;
+    animation: firstKey 1s infinite;
+} */
+
+/* @keyframes firstKey {
+    0% {left:0px; background-color: red;}
+    40% {top: 100px; background-color: blue;}
+    100% {left: 200px; background: yellow; width: 300px;}
+} */

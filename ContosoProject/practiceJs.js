@@ -74,7 +74,7 @@ Object.assign(document.createElement('h1'), {
     innerHTML: `Welcome ${data.name} ${data.surname} ` 
 }))
 
-const students = [
+var students = [
     {
         name: "dineo",
         surname: "mathibela"
@@ -92,10 +92,26 @@ const students = [
         surname: "Paul"
     }
 ]
-var db
-const dbRequest = indexedDB.open("MyDatabase")
-dbRequest.onsuccess = (e) => {
-    db = e.target.result
-    console.log(db)
-}
-const x = db.createObjectStore("students", {})
+// var db; // Reference to the database to use
+// var openRequest = indexedDB.open("contosoDB");
+// openRequest.onsuccess = function(event) {
+//  db = event.target.result;
+// };
+// openRequest.onerror = function(event) {
+//  alert("Error " + event.target.errorCode + " occurred while opening the database");
+// };
+// var attendee = {
+//     id: "1",
+//     name: "Rachel Valdez",
+//     password: "Pa$$w0rd"
+//    };
+// var attendeeStore = db.createObjectStore("attendees", { keyPath: "id" });
+   
+// ===========================create circle canvas=========================
+
+var c = document.getElementById("mycanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.fill()
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+ctx.stroke();
