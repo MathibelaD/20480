@@ -115,3 +115,12 @@ ctx.beginPath();
 ctx.fill()
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
+
+// ========================Web sockets================================
+var url 
+let socket = new WebSocket(url);
+
+socket.addEventListener("message", event => {
+    console.log(`Received message: ${event.data}`);
+  });
+  
