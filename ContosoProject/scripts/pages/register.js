@@ -43,4 +43,3 @@ const submitForm = () => {
 // checkPasswords()
 addPasswordInputEventListeners();
 addSubmitClickEventListener();
-submitForm()

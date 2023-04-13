@@ -9,9 +9,17 @@
         <link href="/scripts/pages/register.js" rel="stylesheet" type="text/css" />
     </head>
 <body>
-    <input type="file" id="file1"/>
-    <button type="submit" onclick="letsReadFile()">Click me</button>
-    <textarea id="textArea"></textarea>
+    <div id="start"></div>
+    <input type="file" id="file1"/><br>
+    <button type="submit" onclick="letsReadFile()">Click me</button><br>
+    <!-- <textarea id="textArea"></textarea><br> -->
+
+    <div id="now" ondrop="HandleDrop(event)" ondragover="allowDrop(event)">
+        <img draggable="true" ondragstart="letsDrag(event)" id="drag1" style="height: 200px;width: 252px;"></div>
+    <h3>div2</h3>
+    <div id="now2" ondrop="HandleDrop(event)" ondragover="allowDrop(event)"></div>
+
+    <p id="geo"></p>
 </body>
 <script src="./practiceJs.js" type="text/javascript"></script>
 </html>
